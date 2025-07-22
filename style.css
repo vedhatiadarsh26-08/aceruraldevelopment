@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.nav{
+    display: flex;
+    
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    gap: 10vh;
+}
+.left{
+    flex-basis: 45%;
+}
+.right{
+    flex-basis: 65%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.right a{
+    text-decoration: none;
+    color: black;
+}
+.mainbody{
+    width: 100vw;
+    height: 70vh;
+}
+.foot{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(166, 163, 163);
+    color: white;
+    bottom: 0;
+}
