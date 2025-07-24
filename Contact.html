@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ACE RURAL DEVELOPERS PVT LTD</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>ACE RURAL - About</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     * {
       margin: 0;
@@ -13,17 +13,16 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #fff;
+      background-color: #f5f5f5;
     }
 
     /* Navbar */
     .navbar {
       display: flex;
       justify-content: space-between;
-      height: 10vh;
       align-items: center;
-      background-color: white;
-      padding: 10px 30px;
+      background-color: #fff;
+      padding: 15px 30px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
@@ -46,81 +45,90 @@
       text-decoration: underline;
     }
 
-    /* Hero Section */
-    .hero-image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-      height: 80vh;
-    }
-
-    .mainbody {
-      width: 100%;
-      max-width: 1000px;
-    }
-
-    .card-grid {
+    /* About Section */
+    .about-container {
       display: flex;
       flex-wrap: wrap;
+      min-height: 80vh;
+      padding: 2rem;
       gap: 20px;
-      justify-content: center;
     }
 
-    .card {
-      flex: 1 1 300px;
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      border: 1px solid #ddd;
+    .sidebar {
+      flex: 1 1 250px;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     }
 
-    .card h2 {
-      font-size: 20px;
+    .sidebar ul {
+      list-style: none;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 1rem;
+      font-weight: bold;
+      padding: 0.5rem;
+      background-color: #eaeaea;
+      border-radius: 4px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .content {
+      flex: 3 1 600px;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    }
+
+    .content p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      margin-left: 1rem;
+    }
+
+    .content ul li h3 {
+      font-size: 16px;
       margin-bottom: 10px;
-    }
-
-    .card p {
-      margin: 8px 0;
-      font-size: 14px;
-    }
-
-    .map-btn {
-      margin-top: 10px;
-      padding: 8px 16px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .map-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .blue {
-      color: #007bff;
-    }
-
-    .green {
-      color: #28a745;
     }
 
     /* Footer */
     .footer {
       text-align: center;
-      background-color: white;
-      padding: 15px;
-      font-size: 14px;
-      box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+      padding: 1rem;
+      background-color: #eee;
+      margin-top: 2rem;
     }
 
     @media (max-width: 768px) {
-      .card-grid {
+      .about-container {
         flex-direction: column;
-        align-items: center;
+        padding: 1rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        margin: 0;
       }
     }
   </style>
@@ -132,39 +140,47 @@
     <div class="logo">ACE RURAL DEVELOPERS PVT LTD</div>
     <nav class="nav-links">
       <a href="index.html">HOME</a>
-      <a href="AboutUs.html">ABOUT</a>
+      <a href="#">ABOUT</a>
       <a href="#">OUR WORK</a>
       <a href="#">NEWS & EVENTS</a>
       <a href="Contact.html">CONTACT</a>
     </nav>
   </header>
 
-  <!-- Hero Image Section with Cards -->
-  <section class="hero-image">
-    <div class="mainbody">
-      <div class="card-grid">
-        <!-- Card 1 -->
-        <div class="card">
-          <h2 class="blue">ACE URBAN DEVELOPERS PVT LTD</h2>
-          <p><strong>Corporate Office</strong></p>
-          <p>Some address line goes here</p>
-          <p><strong>Telephone</strong>: <span class="bold"></span></p>
-          <p><strong>Email</strong>: <span class="bold"></span></p>
-          <button class="map-btn">📍 Map</button>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="card">
-          <h2 class="green">HITEX</h2>
-          <p><strong>Registered Office</strong></p>
-          <p>Another address line here</p>
-          <p><strong>Telephone</strong><br><span class="bold"></span></p>
-          <p><strong>Email</strong><br> <span class="bold"></span></p>
-          <button class="map-btn">📍 Map</button>
-        </div>
-      </div>
+  <!-- About Section -->
+  <div class="about-container">
+    <div class="sidebar">
+      <ul>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Mission.html">Mission & Vision</a></li>
+        <li><a href="#">Values</a></li>
+        <li><a href="#">Founders</a></li>
+        <li><a href="#">Management Team</a></li>
+        <li><a href="#">Group Companies</a></li>
+        <li><a href="#">Awards</a></li>
+        <li><a href="#">CSR Initiatives</a></li>
+      </ul>
     </div>
-  </section>
+
+    <div class="content">
+      <p>
+        ACE Rural Developers Pvt. Ltd. is a visionary enterprise committed to redefining rural development in India, with a special focus on Telangana’s heartland. Rooted in sustainability, innovation, and cultural heritage, we aim to transform scattered, underutilized rural land into vibrant ecosystems that foster economic empowerment and community wellness.
+      </p>
+      <br>
+      <p>With over 70 to 100 acres under our fold, we focus on high-impact initiatives including:</p>
+      <br>
+      <ul>
+        <li><h3>Agro-based clusters and organic farming zones</h3></li>
+        <li><h3>Export-oriented processing hubs for agriculture and wellness products</h3></li>
+        <li><h3>Eco-tourism and wellness retreats rooted in rural traditions</h3></li>
+        <li><h3>Skill development, renewable energy, and rural employment zones</h3></li>
+      </ul>
+      <br>
+      <p>
+        At ACE, we believe rural is the future. We envision strategic collaborations with like-minded institutions, investors, and infrastructure leaders to scale our impact — with a clear mission to create self-sustaining rural economies, boost exports from the grassroots, and foster environmentally conscious development.
+      </p>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
