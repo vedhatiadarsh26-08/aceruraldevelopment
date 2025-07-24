@@ -16,37 +16,51 @@
       background-color: #f5f5f5;
     }
 
+    /* Navbar (same as previous code) */
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #fff;
-      height: 10vh;
       padding: 1rem 2rem;
       border-bottom: 1px solid #ccc;
+      flex-wrap: wrap;
     }
 
     .nav .left h1 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: bold;
+    }
+
+    .nav .right {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     .nav .right a {
-      margin-left: 1.5rem;
       text-decoration: none;
       color: #000;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
 
+    .nav .right a:hover {
+      color: #2196f3;
+    }
+
+    /* About Section */
     .about-container {
       display: flex;
+      flex-wrap: wrap;
       min-height: 80vh;
       padding: 2rem;
+      gap: 2rem;
     }
 
     .sidebar {
-      width: 20vw;
-      padding-right: 2rem;
+      width: 20%;
+      min-width: 200px;
     }
 
     .sidebar ul {
@@ -61,28 +75,78 @@
       border-radius: 4px;
     }
 
+    .sidebar ul li a {
+      text-decoration: none;
+      color: black;
+    }
+
     .content {
-      width: 80vw;
+      flex: 1;
+      min-width: 280px;
       padding: 1rem 2rem;
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     }
 
-    .content p {
+    .content p, .content ul {
       font-size: 1rem;
       line-height: 1.6;
     }
-    .sidebar ul li a{
-        text-decoration: none;
-        color: black;
-     }
 
+    .content ul li {
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
     .foot {
       text-align: center;
       padding: 1rem;
       background-color: #eee;
       margin-top: 2rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav .left h1 {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      .nav .right {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .about-container {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+
+      .content {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav .right a {
+        font-size: 0.9rem;
+      }
+
+      .content p, .content ul li {
+        font-size: 0.9rem;
+      }
+
+      .nav .left h1 {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -107,29 +171,31 @@
       <ul>
         <li><a href="AboutUs.html">About Us</a></li>
         <li><a href="Mission.html">Mission & Vision</a></li>
-        <li><a href="">Values</a></li>
-        <li><a href="">Founders</a></li>
-        <li><a href="">Management Team</a></li>
-        <li><a href="">Group Companies</a></li>
-        <li><a href="">Awards</a></li>
-        <li><a href="">CSR Initiatives</a></li>
+        <li><a href="#">Values</a></li>
+        <li><a href="#">Founders</a></li>
+        <li><a href="#">Management Team</a></li>
+        <li><a href="#">Group Companies</a></li>
+        <li><a href="#">Awards</a></li>
+        <li><a href="#">CSR Initiatives</a></li>
       </ul>
     </div>
     <div class="content">
-     <P style="font-size: 15px;">
-        ACE Rural Developers Pvt. Ltd. is a visionary enterprise committed to redefining rural development in India, with a special focus on Telangana’s heartland. Rooted in sustainability, innovation, and cultural heritage, we aim to transform scattered, underutilized rural land into vibrant ecosystems that foster economic empowerment and community wellness
-     </P>
-     <br>
-     <p style="font-size: 15px;">With over 70 to 100 acres under our fold, we focus on high-impact initiatives including:</p><br>
-     <ul>
+      <p>
+        ACE Rural Developers Pvt. Ltd. is a visionary enterprise committed to redefining rural development in India, with a special focus on Telangana’s heartland. Rooted in sustainability, innovation, and cultural heritage, we aim to transform scattered, underutilized rural land into vibrant ecosystems that foster economic empowerment and community wellness.
+      </p>
+      <br>
+      <p>With over 70 to 100 acres under our fold, we focus on high-impact initiatives including:</p>
+      <br>
+      <ul>
         <li><h3>Agro-based clusters and organic farming zones</h3></li>
         <li><h3>Export-oriented processing hubs for agriculture and wellness products</h3></li>
         <li><h3>Eco-tourism and wellness retreats rooted in rural traditions</h3></li>
         <li><h3>Skill development, renewable energy, and rural employment zones</h3></li>
-     </ul>
-
-     <br>
-     <p style="font-size: 15px;" >At ACE, we believe rural is the future. We envision strategic collaborations with like-minded institutions, investors, and infrastructure leaders to scale our impact —<br> with a clear mission to create self-sustaining rural economies, boost exports from the grassroots, and foster environmentally conscious development.</p>
+      </ul>
+      <br>
+      <p>
+        At ACE, we believe rural is the future. We envision strategic collaborations with like-minded institutions, investors, and infrastructure leaders to scale our impact — with a clear mission to create self-sustaining rural economies, boost exports from the grassroots, and foster environmentally conscious development.
+      </p>
     </div>
   </div>
 
